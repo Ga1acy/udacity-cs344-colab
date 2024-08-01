@@ -6,6 +6,7 @@
 ############################################################################
 
 # collect source files
+set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-gencode arch=compute_50,code=sm_50;-gencode arch=compute_60,code=sm_60;-gencode arch=compute_70,code=sm_70)
 
 file( GLOB  hdr *.hpp *.h )
 file( GLOB  cu  *.cu)
